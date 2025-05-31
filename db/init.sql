@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS demo;
+
+CREATE USER IF NOT EXISTS 'mahmoud'@'%' IDENTIFIED BY '123456789';
+
+GRANT ALL PRIVILEGES ON demo.* TO 'mahmoud'@'%';
+
+FLUSH PRIVILEGES;
+
+USE demo;
+
+CREATE TABLE IF NOT EXISTS users (
+    username VARCHAR(50),
+    password VARCHAR(100),
+    category VARCHAR(50)
+);
+
